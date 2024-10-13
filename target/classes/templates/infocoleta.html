@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GESTÃO DE RESÍDUOS</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Chamada da CDN Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Chamado do JS no BS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+<body class="container-fluid">
+<header>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <nav class="navbar navbar-expand-lg px-3" style="background-color: #218838;">
+        <!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
+        <!--                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"-->
+        <!--                aria-label="Toggle navigation">-->
+        <!--          <span class="navbar-toggler-icon btn-light"></span>-->
+        <!--        </button>-->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="frota.html"
+                 style="color: white; width: 90%;">Frota</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="agendamento.html" style="color: white;" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">
+                Coleta
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Agendamento</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" style="color: white;" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">
+                Ponto de Coleta
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Informações</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<br>
+<div class="container">
+  <h1>LOCAIS DE COLETA</h1>
+  <form id="crud-form">
+    <input type="hidden" id="itemId" />
+    <input type="text" id="itemEndereco" placeholder="Endereço" required />
+    <input type="text" id="itemBairro" placeholder="Bairro" required />
+    <input type="text" id="itemCep" placeholder="Cep" required />
+    <input type="text" id="itemCidade" placeholder="Cidade" required />
+    <input type="text" id="itemEstado" placeholder="Estado" required />
+    <input type="text" id="itemNome" placeholder="Nome" required />
+    <input type="text" id="itemTelefone" placeholder="Telefone" required />
+    <input type="text" id="itemEmail" placeholder="Email" required />
+    <input type="text" id="itemCpf" placeholder="Cpf" required />
+    <input type="text" id="itemNumero" placeholder="Número" required />
+    <input type="text" id="itemComplemento" placeholder="Complemento" required />
+    <button type="submit">Salvar</button>
+  </form>
+
+  <h2>Informações</h2>
+  <table id="itemsTable">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Endereço</th>
+      <th>Bairro</th>
+      <th>Cep</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Cpf</th>
+      <th>Número</th>
+      <th>Complemento</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Os itens serão adicionados aqui dinamicamente -->
+    </tbody>
+  </table>
+</div>
+</body>
+<script src="js/pontocoleta.js"></script>
+</body>
+</html>
